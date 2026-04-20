@@ -3,255 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divyanshu Kumar Sharma - Portfolio</title>
+    <title>Divyanshu Kumar Sharma | AI & ML Engineer</title>
+    <meta name="description" content="Portfolio of Divyanshu Kumar Sharma - AI/ML Student at Manav Rachna University. Building intelligent systems and innovative tech solutions.">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Canvas -->
+    <canvas id="neural-canvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>DKS</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav class="navbar glass">
+        <a href="#home" class="nav-logo">
+            <i class="fas fa-microchip gradient-text"></i>
+            <span>DKS</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Journey</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="glass" style="padding: 8px; border-radius: 10px; cursor: pointer;">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Divyanshu Kumar Sharma</span></h1>
-            <h2 class="typing-text"></h2>
-            <p class="hero-description">Passionate about building intelligent systems and solving real-world problems through innovative technology solutions.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                <a href="#" class="btn btn-outline">Download Resume</a>
+            <span class="badge">Available for Internships 2024</span>
+            <h1>Hi, I'm <br><span class="gradient-text">Divyanshu Sharma</span></h1>
+            <p class="hero-typing" style="font-size: 1.25rem; height: 1.5em; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem;"></p>
+            <p style="margin-bottom: 2.5rem; color: var(--text-muted); font-size: 1.1rem; max-width: 500px;">
+                Specializing in building intelligent systems that bridge the gap between human intuition and machine efficiency.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-magnetic btn-primary">View My Work</a>
+                <a href="#" class="btn-magnetic glass" style="margin-left: 1rem; color: var(--text-main); text-decoration: none;">Download CV</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="profile-placeholder">
-                <i class="fas fa-user"></i>
+        <div class="hero-visual">
+            <div class="hero-img-container">
+                <img src="assets/hero.png" alt="Divyanshu Abstract AI Avatar">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate Computer Science student specializing in AI/ML, currently pursuing my B.Tech at Manav Rachna University. My journey in technology is driven by curiosity and the desire to create intelligent solutions that make a real impact.</p>
-                    <p>With a strong foundation in programming and a growing expertise in artificial intelligence and machine learning, I enjoy tackling complex problems and building applications that bridge the gap between theoretical concepts and practical implementations.</p>
-                    <p>When I'm not coding, you'll find me exploring the latest developments in AI, contributing to open-source projects, or learning new technologies that push the boundaries of what's possible.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
+    <section id="about" style="padding: 100px 10% 50px;">
+        <div class="glass" style="padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Solving <span class="gradient-text">Complex Problems</span> with AI</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Currently a B.Tech Computer Science student at Manav Rachna University, I focus on the intersection of Machine Learning and real-world utility.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="glass" style="padding: 20px; text-align: center;">
+                        <h3 class="gradient-text" style="font-size: 2rem;">50+</h3>
+                        <p style="font-size: 0.8rem; font-weight: 600;">Projects</p>
                     </div>
-                    <div class="stat">
-                        <h3>3+</h3>
-                        <p>Years Learning</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5+</h3>
-                        <p>Technologies</p>
+                    <div class="glass" style="padding: 20px; text-align: center;">
+                        <h3 class="gradient-text" style="font-size: 2rem;">3+</h3>
+                        <p style="font-size: 0.8rem; font-weight: 600;">Years of Code</p>
                     </div>
                 </div>
+            </div>
+            <div style="background: var(--bg-surface); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-top: 5px;"></i>
+                        <span>Implementing state-of-the-art ML models</span>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-top: 5px;"></i>
+                        <span>Designing high-performance web platforms</span>
+                    </li>
+                    <li style="margin-bottom: 0; display: flex; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-top: 5px;"></i>
+                        <span>Agentic AI and Cybersecurity research</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">C</span>
-                        <span class="skill-item">Java</span>
+    <!-- Skills Bento Grid -->
+    <section id="skills" style="padding: 100px 0;">
+        <div class="section-header">
+            <span class="badge">Stack</span>
+            <h2>Technical <span class="gradient-text">Proficiency</span></h2>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item glass row-span-2">
+                <i class="fas fa-code-branch skill-icon"></i>
+                <div>
+                    <div class="skill-title">Languages</div>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C</span>
+                        <span class="tag">JS</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Web Development</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">HTML</span>
-                        <span class="skill-item">CSS</span>
-                        <span class="skill-item">JavaScript</span>
-                    </div>
+            </div>
+            <div class="bento-item glass col-span-2">
+                <i class="fas fa-brain skill-icon"></i>
+                <div>
+                    <div class="skill-title">AI & Machine Learning</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Predictive modeling, NLP, and intelligent agents.</p>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI/ML</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Machine Learning</span>
-                        <span class="skill-item">Python Libraries</span>
-                        <span class="skill-item">Data Analysis</span>
-                    </div>
+            </div>
+            <div class="bento-item glass">
+                <i class="fas fa-shield-halved skill-icon"></i>
+                <div class="skill-title">Cybersecurity</div>
+            </div>
+            <div class="bento-item glass col-span-2">
+                <i class="fas fa-layer-group skill-icon"></i>
+                <div class="skill-title">Web Architecture</div>
+                <div class="skill-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">PostgreSQL</span>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">Figma</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-lightbulb"></i> Other Skills</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Problem Solving</span>
-                        <span class="skill-item">Algorithms</span>
-                        <span class="skill-item">Debugging</span>
-                    </div>
-                </div>
+            </div>
+            <div class="bento-item glass">
+                <i class="fas fa-terminal skill-icon"></i>
+                <div class="skill-title">Tools</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="python">Python</button>
+    <section id="projects" style="padding: 100px 0;">
+        <div class="section-header">
+            <span class="badge">Gallery</span>
+            <h2>Featured <span class="gradient-text">Creations</span></h2>
+        </div>
+        <div class="projects-grid">
+            <!-- MangaVerse -->
+            <div class="project-card glass">
+                <img src="assets/mangaverse.png" alt="MangaVerse" class="project-img">
+                <div class="project-overlay">
+                    <h3>MangaVerse Platform</h3>
+                    <p>A high-performance manga reader with seamless lazy-loading and cloud sync.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Divyanshu123-code/mangaverse" target="_blank" class="glass" style="padding: 8px 15px; text-decoration: none; color: white;"><i class="fab fa-github"></i> Code</a>
+                        <button class="glass project-view-btn" style="padding: 8px 15px; color: white;">Details</button>
+                    </div>
+                </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>MangaVerse Web Platform</h3>
-                        <p>A comprehensive web platform for manga enthusiasts with user authentication, reading features, and community interaction.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code/mangaverse" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
+            <!-- AI Tool -->
+            <div class="project-card glass">
+                <img src="assets/ai_tool.png" alt="AI Tool" class="project-img">
+                <div class="project-overlay">
+                    <h3>AI Tool</h3>
+                    <p>A web-based AI tool with multiple pages including about and contact sections, built with clean HTML structure.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Divyanshu123-code/ai-tool" target="_blank" class="glass" style="padding: 8px 15px; text-decoration: none; color: white;"><i class="fab fa-github"></i> Code</a>
+                        <button class="glass project-view-btn" style="padding: 8px 15px; color: white;">Details</button>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="ai">
-                    <div class="project-image">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Scheduling System</h3>
-                        <p>An intelligent scheduling system that uses machine learning algorithms to optimize task allocation and time management.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Algorithms</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code/schedule_ai" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
+            </div>
+            <!-- Sign Language -->
+            <div class="project-card glass">
+                <img src="assets/sign_language.png" alt="Sign Language Identifier" class="project-img">
+                <div class="project-overlay">
+                    <h3>Sign-to-Text AI</h3>
+                    <p>Real-time computer vision system for translating gestures into text.</p>
+                    <div class="project-links">
+                        <a href="#" class="glass" style="padding: 8px 15px; text-decoration: none; color: white;"><i class="fab fa-github"></i> Code</a>
+                        <button class="glass project-view-btn" style="padding: 8px 15px; color: white;">Details</button>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="python">
-                    <div class="project-image">
-                        <i class="fas fa-dice"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Guess the Number Game</h3>
-                        <p>An interactive Python game with multiple difficulty levels, score tracking, and an intuitive user interface.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Game Logic</span>
-                            <span>User Interface</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="python">
-                    <div class="project-image">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>CLI Calculator</h3>
-                        <p>A feature-rich command-line calculator with advanced mathematical operations and expression parsing capabilities.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>CLI</span>
-                            <span>Mathematics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-image">
-                        <i class="fas fa-hand-paper"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sign Language Identifier</h3>
-                        <p>An AI-powered system that identifies and interprets sign language gestures using computer vision and machine learning.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Computer Vision</span>
-                            <span>AI/ML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code/sign-language-identifier" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-image">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Honeypot Agentic AI</h3>
-                        <p>An agentic AI-based honeypot system designed to detect and analyze malicious activity using intelligent deception techniques.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Agentic AI</span>
-                            <span>Cybersecurity</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyanshu123-code/honeypot-agentic-ai" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
+            </div>
+             <!-- Honeypot -->
+             <div class="project-card glass">
+                <img src="assets/honeypot.png" alt="Honeypot AI" class="project-img">
+                <div class="project-overlay">
+                    <h3>Agentic Honeypot AI</h3>
+                    <p>Self-learning deceptive environments to capture and analyze cyber attacks.</p>
+                    <div class="project-links">
+                        <a href="#" class="glass" style="padding: 8px 15px; text-decoration: none; color: white;"><i class="fab fa-github"></i> Code</a>
+                        <button class="glass project-view-btn" style="padding: 8px 15px; color: white;">Details</button>
                     </div>
                 </div>
             </div>
@@ -259,86 +202,78 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Education</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Young Innovator Internship</h3>
-                    <p>Scaler</p>
-                    <span class="achievement-year">2024</span>
+    <section id="achievements" style="padding: 100px 0;">
+        <div class="section-header">
+            <span class="badge">History</span>
+            <h2>My <span class="gradient-text">Journey</span></h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2024 - Present</span>
+                <div class="glass" style="padding: 30px;">
+                    <h3 style="margin-bottom: 10px;">Young Innovator Intern</h3>
+                    <p style="color: var(--primary); font-weight: 700;">Scaler</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+                        Working on cutting-edge software solutions and collaborating with industry mentors.
+                    </p>
                 </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>B.Tech Computer Science</h3>
-                    <p>AI/ML Specialization<br>Manav Rachna University</p>
-                    <span class="achievement-year">2022-2026</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2022 - 2026</span>
+                <div class="glass" style="padding: 30px;">
+                    <h3 style="margin-bottom: 10px;">Bachelor of Technology (CSE)</h3>
+                    <p style="color: var(--primary); font-weight: 700;">Manav Rachna University</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+                        Specializing in Artificial Intelligence and Machine Learning.
+                    </p>
                 </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Technical Certifications</h3>
-                    <p>Various programming and AI/ML certificates</p>
-                    <span class="achievement-year">2023-2024</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2023</span>
+                <div class="glass" style="padding: 30px;">
+                    <h3 style="margin-bottom: 10px;">ML & Data Science Certification</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        Mastered core concepts of supervised learning, neural networks, and data visualization.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and innovation.</p>
-                    <div class="contact-links">
-                        <a href="mailto:dk1474434@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            dk1474434@gmail.com
-                        </a>
-                        <a href="https://www.linkedin.com/in/divyanshu-kumar-sharma-52270836b" class="contact-link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn Profile
-                        </a>
-                        <a href="https://github.com/Divyanshu123-code" class="contact-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                            GitHub Profile
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+    <section id="contact" style="padding: 100px 10%;">
+        <div class="glass" style="padding: 60px; text-align: center;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Let's Create <span class="gradient-text">the Future.</span></h2>
+            <p style="color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                I'm currently looking for 2024 internship opportunities in AI/ML or Fullstack Development.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="mailto:dk1474434@gmail.com" class="btn-magnetic btn-primary" style="text-decoration: none; color: white;">Email Me</a>
+                <a href="https://www.linkedin.com/in/divyanshu-kumar-sharma-52270836b" target="_blank" class="btn-magnetic glass" style="text-decoration: none; color: var(--text-main); font-weight: 600;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Divyanshu123-code" target="_blank" class="btn-magnetic glass" style="text-decoration: none; color: var(--text-main); font-weight: 600;"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Divyanshu Kumar Sharma. All rights reserved.</p>
-        </div>
+    <footer style="padding: 50px 0; text-align: center; border-top: 1px solid var(--border);">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Divyanshu Kumar Sharma. Built with <i class="fas fa-heart" style="color: #ef4444;"></i> + Agentic AI.</p>
     </footer>
 
+    <!-- Modal Shell -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass">
+            <button id="close-modal" style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; color: white; cursor: pointer;">&times;</button>
+            <div id="modal-body">
+                <!-- Content via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
