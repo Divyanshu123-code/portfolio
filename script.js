@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 7. Theme Toggle
     initThemeToggle();
+    
+    // 8. 3D Tilt Effect
+    initTiltEffect();
 });
 
 /* --- Neural Background --- */
@@ -100,20 +103,46 @@ function initNeuralCanvas() {
     animate();
 }
 
-/* --- Custom Cursor --- */
+/* --- Custom Cursor & Trail --- */
 function initCustomCursor() {
     const cursor = document.getElementById('custom-cursor');
+    const trail = document.getElementById('cursor-trail');
     
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+
     document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
     });
     
-    const clickables = document.querySelectorAll('a, button, .project-card');
+    // Smooth trail animation
+    function animateTrail() {
+        // Linear interpolation for smooth trailing
+        trailX += (mouseX - trailX) * 0.15;
+        trailY += (mouseY - trailY) * 0.15;
+        
+        trail.style.left = trailX + 'px';
+        trail.style.top = trailY + 'px';
+        
+        requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+    
+    const clickables = document.querySelectorAll('a, button, .project-card, .bento-item');
     clickables.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(2)');
-        el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
-        el.style.cursor = 'none'; // Hide native cursor if possible
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(2)';
+            trail.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            trail.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+        el.style.cursor = 'none'; // Hide native cursor
     });
 }
 
@@ -224,8 +253,34 @@ function initThemeToggle() {
         const isDark = body.getAttribute('data-theme') !== 'light';
         body.setAttribute('data-theme', isDark ? 'light' : 'dark');
         icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    });
+}
+
+/* --- 3D Tilt Effect --- */
+function initTiltEffect() {
+    const cards = document.querySelectorAll('.project-card, .bento-item, .hero-img-container');
+    
+    cards.forEach(card => {
+        card.classList.add('tilt');
         
-        // Update neural background color reference
-        // (Canvas uses theme variables dynamically in the fillStyle call)
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left; // x position within the element.
+            const y = e.clientY - rect.top;  // y position within the element.
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+            const rotateY = ((x - centerX) / centerX) * 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            card.style.transition = 'none';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            card.style.transition = 'transform 0.5s ease';
+        });
     });
 }
